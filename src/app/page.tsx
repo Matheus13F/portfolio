@@ -12,19 +12,18 @@ import { fetchSkills } from "./utils/fetchSkills";
 import { fetchSocials } from "./utils/fetchSocials";
 
 export default async function Home() {
-  // const pageInfo: PageInfo = await fetchPageInfo();
-  // const experiences: Experience[] = await fetchExepriences();
-  // const skills: Skill[] = await fetchSkills();
-  // const projects: Project[] = await fetchProjects();
-  // const socials: Social[] = await fetchSocials();
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const experiences: Experience[] = await fetchExepriences();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
+  const socials: Social[] = await fetchSocials();
 
   return (
     <div
       className="h-screen snap-y snap-mandatory overflow-scroll z-0 
       overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#EBA417]/80"
     >
-      hey hey hey aaaa
-      {/* <Header socials={socials} />
+      <Header socials={socials} />
 
       <section id="hero" className="snap-center">
         <Hero pageInfo={pageInfo} />
@@ -48,7 +47,7 @@ export default async function Home() {
 
       <section id="contact" className="snap-center">
         <ContactMe pageInfo={pageInfo} />
-      </section> */}
+      </section>
     </div>
   );
 }
