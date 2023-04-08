@@ -5,6 +5,7 @@ export async function fetchExepriences() {
       cache: "no-cache",
     }
   );
+
   const data = await res.json();
 
   const experiences: Experience[] = data.experiences;
