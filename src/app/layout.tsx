@@ -1,8 +1,11 @@
 import "./globals.css";
 
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin", "greek"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "500", "700", "800", "900"],
+});
 
 export const metadata = {
   title: "Portfolio",
@@ -15,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="bg-[#121214] text-white">{children}</body>
+    <html lang="en" className={poppins.className}>
+      <body className="bg-[#f5f5f5]">{children}</body>
     </html>
   );
 }

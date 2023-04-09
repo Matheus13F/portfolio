@@ -9,7 +9,7 @@ type Props = {
 
 export function Header({ socials }: Props) {
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center backdrop-blur">
+    <header className="flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -50,7 +50,7 @@ export function Header({ socials }: Props) {
         transition={{
           duration: 1.3,
         }}
-        className="flex flex-row items-center text-gray-300 cursor-pointer"
+        className="flex flex-row items-center text-gray-900 cursor-pointer"
       >
         <SocialIcon
           className="cursor-pointer"
@@ -58,9 +58,7 @@ export function Header({ socials }: Props) {
           fgColor="gray"
           bgColor="transparent"
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Contact me
-        </p>
+        <p className="hidden md:inline-flex text-sm text-gray-400">Say hello</p>
       </motion.div>
     </header>
   );

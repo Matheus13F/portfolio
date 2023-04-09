@@ -12,8 +12,8 @@ type Props = {
 export function ExperienceCard({ experience }: Props) {
   return (
     <article
-      className="flex flex-col rounded-2xl items-center space-y-7 flex-shrink-0 w-full md:w-[500px] px-2
-       snap-center bg-[#1D2426] py-5 overflow-hidden"
+      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-full md:w-[500px] px-2
+       snap-center shadow-lg py-5 overflow-hidden"
     >
       <div className="">
         <motion.img
@@ -68,17 +68,6 @@ export function ExperienceCard({ experience }: Props) {
                 year: "numeric",
               })}
         </p>
-
-        <ul
-          className="list-disc space-y-4 ml-5 text-lg max-h-40 overflow-hidden overflow-y-scroll scrollbar-thin 
-          scrollbar-track-gray-500 scrollbar-thumb-[#EBA417] pr-5 pb-5"
-        >
-          {experience?.points.map((point, index) => (
-            <li className="overflow-hidden text-sm md:text-base" key={index}>
-              {point}
-            </li>
-          ))}
-        </ul>
       </div>
     </article>
   );

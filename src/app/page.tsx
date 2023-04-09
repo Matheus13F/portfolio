@@ -14,38 +14,38 @@ import { fetchSocials } from "./utils/fetchSocials";
 export default async function Home() {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExepriences();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] = await fetchProjects();
+  // const skills: Skill[] = await fetchSkills();
+  // const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocials();
 
   return (
     <div
-      className="h-screen snap-y snap-mandatory overflow-scroll z-0 
+      className="h-screen overflow-scroll z-0 
       overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#EBA417]/80"
     >
       <Header socials={socials} />
 
-      <section id="hero" className="snap-center">
+      <section id="hero">
         <Hero pageInfo={pageInfo} />
       </section>
 
-      <section id="about" className="snap-center">
+      <section id="about">
         <About pageInfo={pageInfo} />
       </section>
 
-      <section id="experience" className="snap-center">
+      <section id="experience">
         <WorkExperience experiences={experiences} />
       </section>
 
-      <section id="skills" className="snap-center">
+      {/* <section id="skills" >
         <Skills skills={skills} />
       </section>
 
-      <section id="projects" className="snap-center">
+      <section id="projects" >
         <Projects projects={projects} />
-      </section>
+      </section> */}
 
-      <section id="contact" className="snap-center">
+      <section id="contact">
         <ContactMe pageInfo={pageInfo} />
       </section>
     </div>

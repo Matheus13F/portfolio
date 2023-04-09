@@ -23,6 +23,7 @@ interface PageInfo extends SanityBody {
   name: string;
   phoneNumber: string;
   profilePic: Image;
+  backgroundImage: Image;
 }
 
 interface Technology extends SanityBody {

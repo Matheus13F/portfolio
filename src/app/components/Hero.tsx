@@ -21,41 +21,28 @@ export function Hero({ pageInfo }: Props) {
     delaySpeed: 2000,
   });
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
-      <BackgroundCircles />
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden relative">
+      {/* <BackgroundCircles /> */}
 
-      <Image
-        src={urlFor(pageInfo?.heroImage).url()}
-        alt="profile"
-        width={128}
-        height={128}
-        className="relative rounded-full h-32 w-32 mx-auto object-cover"
-      />
-
-      <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[10px] md:tracking-[13px]">
-          {pageInfo?.role}
-        </h2>
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold scroll-px-10">
-          <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#EBA417" />
+      <div className="z-20 space-y-5 flex flex-col">
+        <h1 className="text-2xl md:text-5xl lg:text-5xl font-semibold scroll-px-10 text-gray-700">
+          {pageInfo?.role} & Designer
         </h1>
 
-        <div className="pt-5 w-full flex flex-wrap items-center gap-4 justify-center">
-          <a href="#about">
-            <button className="heroButton">About</button>
-          </a>
-          <a href="#experience">
-            <button className="heroButton">Experience</button>
-          </a>
-          <a href="#skills">
-            <button className="heroButton">Skills</button>
-          </a>
-          <a href="#projects">
-            <button className="heroButton">Projects</button>
-          </a>
-        </div>
+        <span className="text-gray-800">
+          I design and code beautifully simple things, and I love what I do.
+        </span>
+
+        <div className="pt-5 w-full flex flex-wrap items-center gap-4 justify-center"></div>
       </div>
+
+      <Image
+        src={urlFor(pageInfo?.backgroundImage).url()}
+        alt="profile"
+        width={500}
+        height={500}
+        className="relative w-[500px] mx-auto object-cover"
+      />
     </div>
   );
 }
