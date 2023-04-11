@@ -4,37 +4,43 @@ import { motion } from "framer-motion";
 import { SkillCard } from "./SkillCard";
 
 type Props = {
-  skills: Skill[];
+  experiences: Experience[];
 };
 
-export function Skills({ skills }: Props) {
+export function Skills({ experiences }: Props) {
+  const arr = [1, 2, 3];
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1.5,
-      }}
-      className="h-screen flex relative flex-col text-center md:text-left xl:flex-row 
-      max-w-[2000px] xl:px-10 min-h-screen justify-center mx-auto items-center overflow-hidden"
-    >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-lg sm:text-xl">
-        Skills
+    <div className="flex relative flex-col text-left max-w-7xl px-5 justify-evenly mx-auto items-center h-fit py-10 space-y-10">
+      <h3 className=" text-gray-800 text-lg sm:text-xl">
+        My Recent Work Experience
       </h3>
 
-      <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
-        Skills that I have proficiency
+      <h3 className="text-gray-500 text-sm">
+        Here are a few past projects I&#39;ve worked on since 2019
       </h3>
 
-      <div className="grid grid-cols-4 gap-5 mt-10 md:mt-32">
-        {skills?.map((skill) => (
-          <SkillCard key={skill._id} skill={skill} />
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mb-12 content-center">
+        {experiences.map((exp) => (
+          <div
+            key={exp._id}
+            className="bg-white flex flex-col rounded-lg min-h-[19rem]"
+          >
+            <div className=" p-8 flex-1">
+              <h3 className="text-lg lg:text-xl font-bold text-center mb-4">
+                {exp.company}
+              </h3>
+              <p className="lg:text-lg">{exp.points}</p>
+            </div>
+          </div>
         ))}
       </div>
-    </motion.div>
+
+      <a
+        href=""
+        className="p-5 bg-[#EBA417] rounded-lg hover:bg-[#EBA417]/90 transition-colors ease-in"
+      >
+        See more on LinkedIn
+      </a>
+    </div>
   );
 }

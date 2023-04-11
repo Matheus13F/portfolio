@@ -1,9 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 import Image from "next/image";
 import urlFor from "../../../lib/urlFor";
+import {
+  BookmarkIcon,
+  CodeBracketIcon,
+  SquaresPlusIcon,
+} from "@heroicons/react/24/solid";
 
 type Props = {
   experience: Experience;
@@ -11,64 +14,32 @@ type Props = {
 
 export function ExperienceCard({ experience }: Props) {
   return (
-    <article
-      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-full md:w-[500px] px-2
-       snap-center shadow-lg py-5 overflow-hidden"
-    >
-      <div className="">
-        <motion.img
-          initial={{
-            y: -100,
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1.2,
-          }}
-          viewport={{ once: true }}
-          src={urlFor(experience?.companyImage).url()}
-          alt="profile"
-          className="relative w-full h-14 md:h-28 xl:h-[150px] object-center object-cover"
-        />
-      </div>
-
-      <div className="px-5 w-full h-[360px] sm:h-[400px]">
-        <h4 className="text-lg sm:text-3xl font-light">
-          {experience?.jobTitle}
-        </h4>
-        <p className="font-bold text-lg sm:text-2xl mt-1">
-          {experience?.company}
-        </p>
-        <div className="flex space-x-2 my-2 overflow-x-scroll pb-4 scrollbar-thin scrollbar-thumb-[#EBA417]">
-          {experience?.technologies.map((technology) => (
-            <Image
-              key={technology?._id}
-              src={urlFor(technology?.heroImage).url()}
-              className="h-10 w-10"
-              alt="technology logo"
-              width={40}
-              height={40}
-            />
-          ))}
+    <article className="flex flex-col space-y-10 rounded-lg items-center flex-shrink-0 w-full md:w-1/3 px-2 py-10">
+      <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
+        <div className="rounded-full bg-[#eba417] p-5">
+          {getIcon("designer")}
         </div>
-
-        <p className="py-5 text-gray-300">
-          {new Date(experience?.dateStarted).toLocaleDateString("pt-BR", {
-            month: "short",
-            year: "numeric",
-          })}{" "}
-          ~{" "}
-          {experience?.isCurrentlyWorkingHere
-            ? "Currently Working"
-            : new Date(experience?.dateEnded).toLocaleDateString("pt-BR", {
-                month: "short",
-                year: "numeric",
-              })}
+        <span className="text-xl font-bold">Designer</span>
+        <p>
+          I value simple content structure, clean design patterns, and
+          thoughtful interactions.
         </p>
+      </div>
+      <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
+        <p className="text-[#EBA417]">Things I enjoy designing:</p>
+        <span>UX, UI, Web, Apps, Logos</span>
+      </div>
+      <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
+        <p className="text-[#EBA417]">Design Tools:</p>
+        <span>Figma</span>
       </div>
     </article>
   );
+}
+
+function getIcon(type: string) {
+  if (type === "designer") return <SquaresPlusIcon className="w-10 h-10" />;
+  else if (type === "software engineer")
+    return <CodeBracketIcon className="w-10 h-10" />;
+  else return <BookmarkIcon className="w-10 h-10" />;
 }
