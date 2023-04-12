@@ -30,7 +30,7 @@ export function Header({ socials }: Props) {
           <SocialIcon
             key={social._id}
             url={social.url}
-            fgColor="gray"
+            fgColor="#EBA417"
             bgColor="transparent"
           />
         ))}
@@ -55,7 +55,7 @@ export function Header({ socials }: Props) {
         <SocialIcon
           className="cursor-pointer"
           network="email"
-          fgColor="gray"
+          fgColor="#EBA417"
           bgColor="transparent"
         />
         <p className="hidden md:inline-flex text-sm text-gray-400">Say hello</p>

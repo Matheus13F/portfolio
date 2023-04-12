@@ -1,15 +1,17 @@
 import { About } from "./components/About";
-import { ContactMe } from "./components/ContactMe";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
-import { Projects } from "./components/Projects";
-import { Skills } from "./components/Skills";
-import { WorkExperience } from "./components/WorkExperience";
+import { HeroStartup } from "./components/HeroStartup";
+import { Experience } from "./components/Experience";
+import { Background } from "./components/Background";
 import { fetchExepriences } from "./utils/fetchExperiences";
 import { fetchPageInfo } from "./utils/fetchPageInfo";
 import { fetchProjects } from "./utils/fetchProjects";
 import { fetchSkills } from "./utils/fetchSkills";
 import { fetchSocials } from "./utils/fetchSocials";
+import { Projects } from "./components/Projects";
+import { Footer } from "./components/Footer";
+import { Testimonials } from "./components/Testimonials";
 
 export default async function Home() {
   const pageInfo: PageInfo = await fetchPageInfo();
@@ -34,19 +36,27 @@ export default async function Home() {
       </section>
 
       <section id="experience" className="border-b-[1px] border-gray-300 pb-10">
-        <WorkExperience experiences={experiences} />
+        <Background experiences={experiences} />
       </section>
 
       <section id="skills" className="border-b-[1px] border-gray-300 pb-10">
-        <Skills experiences={experiences} />
+        <Experience experiences={experiences} />
       </section>
 
-      {/* <section id="projects" >
-        <Projects projects={projects} />
-      </section> */}
+      <section id="projects">
+        <HeroStartup />
+      </section>
 
-      <section id="contact">
-        <ContactMe pageInfo={pageInfo} />
+      <section id="skills" className="border-b-[1px] border-gray-300 pb-10">
+        <Projects experiences={experiences} />
+      </section>
+
+      <section>
+        <Testimonials experiences={experiences} />
+      </section>
+
+      <section>
+        <Footer socials={socials} />
       </section>
     </div>
   );

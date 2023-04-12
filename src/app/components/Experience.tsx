@@ -7,7 +7,7 @@ type Props = {
   experiences: Experience[];
 };
 
-export function Skills({ experiences }: Props) {
+export function Experience({ experiences }: Props) {
   const arr = [1, 2, 3];
   return (
     <div className="flex relative flex-col text-left max-w-7xl px-5 justify-evenly mx-auto items-center h-fit py-10 space-y-10">
