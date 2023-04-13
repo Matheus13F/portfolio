@@ -1,23 +1,38 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "skill",
-  title: "Skill",
+  name: "testimonial",
+  title: "Testimonial",
   type: "document",
   fields: [
     defineField({
-      name: "title",
-      title: "Tittle",
-      description: "Title of the skill",
-      type: "string",
+      name: "description",
+      title: "Description",
+      description: "Here goes the testimonial",
+      type: "text",
     }),
     defineField({
-      name: "heroImage",
+      name: "image",
       title: "Image",
       type: "image",
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: "name",
+      title: "Name",
+      type: "string",
+    }),
+    defineField({
+      name: "role",
+      title: "Role",
+      type: "string",
+    }),
+    defineField({
+      name: "linkToPage",
+      title: "Link To Page",
+      type: "url",
     }),
     //defineField({
     //  name: "progress",

@@ -1,8 +1,7 @@
 "use client";
 
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Header } from "../components/Header";
 
 type Inputs = {
   name: string;
@@ -26,20 +25,23 @@ export default function Contact() {
 
       <div className="flex flex-col px-5 mt-16 gap-5">
         <div className="mb-10" />
-        <h4 className="text-base sm:text-2xl md:text-4xl font-semibold text-center">
-          I&#39;ve got just what you need.{" "}
-          <span className="underline decoration-[#EBA417]/50">Lets talk.</span>
+        <h4 className="text-base sm:text-2xl md:text-4xl text-center max-w-2xl">
+          Thanks for taking the time to reach out.
+          <span className="underline decoration-yellow/50">
+            {" "}
+            How can I help you today?.
+          </span>
         </h4>
 
         <div className="space-y-0 md:space-y-10 flex flex-col">
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#EBA417] h-7 w-7 animate-pulse" />
-            <p className="text-base sm:text-2xl">asdasd</p>
+            <MapPinIcon className="text-yellow h-7 w-7 animate-pulse" />
+            <p className="text-base sm:text-2xl">Sao Paulo / Brasil</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#EBA417] h-7 w-7 animate-pulse" />
-            <p className="text-base sm:text-2xl">asdasd</p>
+            <EnvelopeIcon className="text-yellow h-7 w-7 animate-pulse" />
+            <p className="text-base sm:text-2xl">mattew-marketing@gmail.com</p>
           </div>
         </div>
 
@@ -78,7 +80,7 @@ export default function Contact() {
           />
           <button
             type="submit"
-            className="bg-[#EBA417] py-5 px-10 rounded-md text-white font-bold text-lg"
+            className="bg-yellow py-5 px-10 rounded-md text-white font-bold text-lg"
           >
             Submit
           </button>

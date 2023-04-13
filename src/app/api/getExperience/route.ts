@@ -3,7 +3,7 @@ import { client } from "../../../../lib/sanity.client";
 import { NextResponse } from "next/server";
 
 const query = groq`
- *[_type == "experience"] {
+ *[_type == "experience"] | order(_updatedAt asc) {
   ...,
   technologies[]->
  }

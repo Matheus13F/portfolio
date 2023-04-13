@@ -1,14 +1,11 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { SkillCard } from "./SkillCard";
+import Image from "next/image";
+import urlFor from "../../../lib/urlFor";
 
 type Props = {
   experiences: Experience[];
 };
 
 export function Experience({ experiences }: Props) {
-  const arr = [1, 2, 3];
   return (
     <div className="flex relative flex-col text-left max-w-7xl px-5 justify-evenly mx-auto items-center h-fit py-10 space-y-10">
       <h3 className=" text-gray-800 text-lg sm:text-xl">
@@ -23,21 +20,30 @@ export function Experience({ experiences }: Props) {
         {experiences.map((exp) => (
           <div
             key={exp._id}
-            className="bg-white flex flex-col rounded-lg min-h-[19rem]"
+            className="bg-white flex flex-col rounded-lg min-h-[19rem] p-8"
           >
-            <div className=" p-8 flex-1">
+            <div className="flex-1">
               <h3 className="text-lg lg:text-xl font-bold text-center mb-4">
                 {exp.company}
               </h3>
-              <p className="lg:text-lg">{exp.points}</p>
+              <p className="text-base">{exp.points}</p>
+            </div>
+            <div className="flex items-center w-full justify-center">
+              <Image
+                src={urlFor(exp.companyImage).url()}
+                alt="profile"
+                width={160}
+                height={160}
+                className="w-28 h-24 object-contain"
+              />
             </div>
           </div>
         ))}
       </div>
 
       <a
-        href=""
-        className="p-5 bg-[#EBA417] rounded-lg hover:bg-[#EBA417]/90 transition-colors ease-in"
+        href="https://www.linkedin.com/in/matheus13f/"
+        className="p-5 bg-yellow rounded-lg hover:bg-yellow/90 transition-colors ease-in text-white"
       >
         See more on LinkedIn
       </a>

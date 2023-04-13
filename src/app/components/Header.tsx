@@ -1,65 +1,32 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { SocialIcon } from "react-social-icons";
+import Image from "next/image";
+import urlFor from "../../../lib/urlFor";
 
 type Props = {
-  socials: Social[];
+  pageInfo: PageInfo;
 };
 
-export function Header({ socials }: Props) {
+export function Header({ pageInfo }: Props) {
   return (
-    <header className="flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
-      <motion.div
-        initial={{
-          x: -500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1.3,
-        }}
-        className="flex flex-row items-center"
-      >
-        {socials.map((social) => (
-          <SocialIcon
-            key={social._id}
-            url={social.url}
-            fgColor="#EBA417"
-            bgColor="transparent"
-          />
-        ))}
-      </motion.div>
-
-      <motion.div
-        initial={{
-          x: 500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1.3,
-        }}
-        className="flex flex-row items-center text-gray-900 cursor-pointer"
-      >
-        <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="#EBA417"
-          bgColor="transparent"
+    <header className="flex justify-between max-w-7xl mx-auto items-center h-24 px-10">
+      <div className="flex flex-row items-center">
+        <Image
+          src={urlFor(pageInfo?.profilePic).url()}
+          alt="profile"
+          width={160}
+          height={169}
+          className="w-8 h-8 md:w-10 md:h-10 object-cover"
         />
-        <p className="hidden md:inline-flex text-sm text-gray-400">Say hello</p>
-      </motion.div>
+      </div>
+
+      <div className="flex space-x-5 items-center text-gray-900 cursor-pointer">
+        <a href="https://codepeek.com.br">My Blog</a>
+        <a
+          href="/contact"
+          className=" rounded-lg text-sm p-2 border-2 border-yellow"
+        >
+          Say hello
+        </a>
+      </div>
     </header>
   );
 }

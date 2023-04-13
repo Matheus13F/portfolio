@@ -7,25 +7,28 @@ import { Background } from "./components/Background";
 import { fetchExepriences } from "./utils/fetchExperiences";
 import { fetchPageInfo } from "./utils/fetchPageInfo";
 import { fetchProjects } from "./utils/fetchProjects";
-import { fetchSkills } from "./utils/fetchSkills";
 import { fetchSocials } from "./utils/fetchSocials";
 import { Projects } from "./components/Projects";
 import { Footer } from "./components/Footer";
 import { Testimonials } from "./components/Testimonials";
+import { fetchBackground } from "./utils/fetchBackground";
+import { fetchTestimonial } from "./utils/fetchTestimonial";
+import project from "../../schemas/project";
 
 export default async function Home() {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExepriences();
-  const skills: Skill[] = await fetchSkills();
-  // const projects: Project[] = await fetchProjects();
+  const background: Background[] = await fetchBackground();
   const socials: Social[] = await fetchSocials();
+  const testimonial: Testimonial[] = await fetchTestimonial();
+  const projects: Project[] = await fetchProjects();
 
   return (
     <div
       className="h-screen overflow-scroll z-0 
-      overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#EBA417]/80"
+      overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-yellow/80"
     >
-      <Header socials={socials} />
+      <Header pageInfo={pageInfo} />
 
       <section id="hero">
         <Hero pageInfo={pageInfo} />
@@ -36,7 +39,7 @@ export default async function Home() {
       </section>
 
       <section id="experience" className="border-b-[1px] border-gray-300 pb-10">
-        <Background experiences={experiences} />
+        <Background background={background} />
       </section>
 
       <section id="skills" className="border-b-[1px] border-gray-300 pb-10">
@@ -48,15 +51,15 @@ export default async function Home() {
       </section>
 
       <section id="skills" className="border-b-[1px] border-gray-300 pb-10">
-        <Projects experiences={experiences} />
+        <Projects projects={projects} />
       </section>
 
       <section>
-        <Testimonials experiences={experiences} />
+        <Testimonials testimonial={testimonial} />
       </section>
 
       <section>
-        <Footer socials={socials} />
+        <Footer socials={socials} pageInfo={pageInfo} />
       </section>
     </div>
   );

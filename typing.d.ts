@@ -44,12 +44,6 @@ interface Experience extends SanityBody {
   technologies: Technology[];
 }
 
-interface Skill extends SanityBody {
-  _type: "skill";
-  heroImage: Image;
-  title: string;
-}
-
 interface Project extends SanityBody {
   _type: "project";
   title: string;
@@ -64,4 +58,23 @@ interface Social extends SanityBody {
   _type: "social";
   title: string;
   url: string;
+}
+
+interface Background extends SanityBody {
+  _type: "background";
+  jobTitle: string;
+  description: string;
+  hardSkill: string;
+  hardSkillPoints: string[];
+  tools: string;
+  toolsPoints: string[];
+}
+
+interface Testimonial extends SanityBody {
+  _type: "testimonial";
+  description: string;
+  image: Image;
+  name: string;
+  role: string;
+  linkToPage: string;
 }

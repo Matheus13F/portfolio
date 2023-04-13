@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import urlFor from "../../../lib/urlFor";
 import Image from "next/image";
 
@@ -10,7 +7,7 @@ type Props = {
 
 export function About({ pageInfo }: Props) {
   return (
-    <div className="flex flex-col relative text-center md:text-left md:flex-row justify-evenly mx-auto items-center w-full max-h-[600px] bg-[#EBA417] text-white pb-20 px-5">
+    <div className="flex flex-col relative text-center md:text-left md:flex-row justify-evenly mx-auto items-center w-full max-h-[600px] bg-yellow text-white pb-20 px-5">
       <div className="max-w-7xl flex items-center justify-center">
         <Image
           src={urlFor(pageInfo?.heroImage).url()}

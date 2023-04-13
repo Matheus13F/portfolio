@@ -3,11 +3,11 @@ import { client } from "../../../../lib/sanity.client";
 import { NextResponse } from "next/server";
 
 const query = groq`
- *[_type == "skill"]
+ *[_type == "background"]
 `;
 
 export async function GET() {
-  const skills: Skill[] = await client.fetch(query);
+  const background: Background[] = await client.fetch(query);
 
-  return NextResponse.json({ skills });
+  return NextResponse.json({ background });
 }

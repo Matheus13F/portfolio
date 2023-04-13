@@ -1,7 +1,15 @@
 import pageInfo from "./pageInfo";
 import experience from "./experience";
-import skill from "./skill";
 import social from "./social";
 import project from "./project";
+import testimonial from "./testimonial";
+import background from "./background";
 
-export const schemaTypes = [pageInfo, experience, skill, social, project];
+export const schemaTypes = [
+  pageInfo,
+  experience,
+  social,
+  project,
+  testimonial,
+  background,
+];

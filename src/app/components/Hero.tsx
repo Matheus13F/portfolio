@@ -1,9 +1,4 @@
-"use client";
-
-import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { BackgroundCircles } from "./BackgroundCircles";
 import Image from "next/image";
-import Link from "next/link";
 import urlFor from "../../../lib/urlFor";
 
 type Props = {
@@ -11,19 +6,8 @@ type Props = {
 };
 
 export function Hero({ pageInfo }: Props) {
-  const [text, count] = useTypewriter({
-    words: [
-      `Hi, my name is ${pageInfo?.name}`,
-      "Guy-who-loves-coffee.tsx",
-      "<ButLovesToCodeMore />",
-    ],
-    loop: true,
-    delaySpeed: 2000,
-  });
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden relative">
-      {/* <BackgroundCircles /> */}
-
+    <div className="flex flex-col space-y-8 items-center justify-center text-center relative h-auto 2xl:h-[calc(100vh-96px)]">
       <div className="z-20 space-y-5 flex flex-col">
         <h1 className="text-2xl md:text-5xl lg:text-5xl font-semibold scroll-px-10 text-gray-700">
           {pageInfo?.role} & Designer
