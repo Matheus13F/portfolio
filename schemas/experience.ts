@@ -38,12 +38,6 @@ export default defineType({
       title: "IsCurrentlyWorkingHere",
       type: "boolean",
     }),
-    // defineField({
-    //   name: "technologies",
-    //   title: "Technologies",
-    //   type: "array",
-    //   of: [{ type: "reference", to: { type: "skill" } }],
-    // }),
     defineField({
       name: "points",
       title: "Points",
