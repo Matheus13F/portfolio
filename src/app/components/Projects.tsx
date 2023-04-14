@@ -24,9 +24,9 @@ export function Projects({ projects }: Props) {
               <h3 className="text-lg font-bold text-center mb-2">
                 {project.title}
               </h3>
-              <p className="text-base">{project.summary}</p>
+              <p className="text-[14px]">{project.summary}</p>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center gap-2">
               <Image
                 src={urlFor(project?.image).url()}
                 alt="profile"

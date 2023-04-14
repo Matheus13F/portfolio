@@ -37,6 +37,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: "avatar",
+      title: "Avatar",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: "phoneNumber",
       title: "PhoneNumber",
       type: "string",

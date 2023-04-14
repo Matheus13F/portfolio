@@ -26,31 +26,31 @@ export default async function Home() {
   return (
     <div
       className="h-screen overflow-scroll z-0 
-      overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-yellow/80"
+      overflow-y-scroll overflow-x-hidden scrollbar md:scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-yellow/80 md:scrollbar-track-gray-900 scrollbar-none"
     >
       <Header pageInfo={pageInfo} />
 
-      <section id="hero">
+      <section>
         <Hero pageInfo={pageInfo} />
       </section>
 
-      <section id="about">
+      <section>
         <About pageInfo={pageInfo} />
       </section>
 
-      <section id="experience" className="border-b-[1px] border-gray-300 pb-10">
+      <section className="border-b-[1px] border-gray-300 pb-10">
         <Background background={background} />
       </section>
 
-      <section id="skills" className="border-b-[1px] border-gray-300 pb-10">
+      <section className="border-b-[1px] border-gray-300 pb-10">
         <Experience experiences={experiences} />
       </section>
 
-      <section id="projects">
+      <section>
         <HeroStartup />
       </section>
 
-      <section id="skills" className="border-b-[1px] border-gray-300 pb-10">
+      <section className="border-b-[1px] border-gray-300 pb-10">
         <Projects projects={projects} />
       </section>
 

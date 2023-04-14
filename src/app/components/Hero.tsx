@@ -7,26 +7,31 @@ type Props = {
 
 export function Hero({ pageInfo }: Props) {
   return (
-    <div className="flex flex-col space-y-8 items-center justify-center text-center relative h-auto 2xl:h-[calc(100vh-96px)]">
-      <div className="z-20 space-y-5 flex flex-col">
-        <h1 className="text-2xl md:text-5xl lg:text-5xl font-semibold scroll-px-10 text-gray-700">
-          {pageInfo?.role} & Designer
+    <div className="flex flex-col space-y-8 items-center justify-center text-center relative h-[calc(100vh-96px)]">
+      <div className="z-20 space-y-10 flex flex-col justify-evenly sm:justify-normal overflow-hidden mt-20 md:mt-32 px-10">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold scroll-px-10 text-gray-700">
+          {pageInfo?.role}
         </h1>
 
         <span className="text-gray-800">
           I design and code beautifully simple things, and I love what I do.
         </span>
 
-        <div className="pt-5 w-full flex flex-wrap items-center gap-4 justify-center"></div>
+        <Image
+          src={urlFor(pageInfo?.avatar).url()}
+          alt="profile"
+          width={500}
+          height={500}
+          className="relative rounded-full w-40 mx-auto object-cover mb-0 sm:mb-56 md:mb-52"
+        />
+        <Image
+          src={urlFor(pageInfo?.backgroundImage).url()}
+          alt="profile"
+          width={500}
+          height={500}
+          className="hidden sm:inline-block w-[600px] mx-auto object-cover"
+        />
       </div>
-
-      <Image
-        src={urlFor(pageInfo?.backgroundImage).url()}
-        alt="profile"
-        width={500}
-        height={500}
-        className="relative w-[500px] mx-auto object-cover"
-      />
     </div>
   );
 }

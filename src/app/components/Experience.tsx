@@ -12,7 +12,7 @@ export function Experience({ experiences }: Props) {
         My Recent Work Experience
       </h3>
 
-      <h3 className="text-gray-500 text-sm">
+      <h3 className="text-gray-500 text-sm text-center">
         Here are a few past projects I&#39;ve worked on since 2019
       </h3>
 
@@ -26,7 +26,7 @@ export function Experience({ experiences }: Props) {
               <h3 className="text-lg lg:text-xl font-bold text-center mb-4">
                 {exp.company}
               </h3>
-              <p className="text-base">{exp.points}</p>
+              <p className="text-[14px]">{exp.points}</p>
             </div>
             <div className="flex items-center w-full justify-center">
               <Image

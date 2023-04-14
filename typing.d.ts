@@ -23,13 +23,8 @@ interface PageInfo extends SanityBody {
   name: string;
   phoneNumber: string;
   profilePic: Image;
+  avatar: Image;
   backgroundImage: Image;
-}
-
-interface Technology extends SanityBody {
-  _type: "skill";
-  heroImage: Image;
-  title: string;
 }
 
 interface Experience extends SanityBody {
@@ -40,8 +35,7 @@ interface Experience extends SanityBody {
   dateEnded: date;
   isCurrentlyWorkingHere: boolean;
   jobTitle: string;
-  points: string[];
-  technologies: Technology[];
+  points: string;
 }
 
 interface Project extends SanityBody {
@@ -51,7 +45,6 @@ interface Project extends SanityBody {
   linkToBuild: string;
   linkToRepo: string;
   summary: string;
-  technologies: Technology[];
 }
 
 interface Social extends SanityBody {

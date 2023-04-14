@@ -41,8 +41,7 @@ export default defineType({
     defineField({
       name: "points",
       title: "Points",
-      type: "array",
-      of: [{ type: "string" }],
+      type: "text",
     }),
   ],
 });

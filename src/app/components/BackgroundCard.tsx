@@ -10,7 +10,7 @@ type Props = {
 
 export function BackgroundCard({ background }: Props) {
   return (
-    <article className="flex flex-col space-y-5 rounded-lg items-center flex-shrink-0 w-full md:w-1/3 px-2 py-10">
+    <article className="flex flex-col space-y-5 items-center flex-shrink-0 w-full md:w-1/3 px-2 py-10">
       <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
         <div className="rounded-full bg-yellow p-5">
           {getIcon(background.jobTitle)}
