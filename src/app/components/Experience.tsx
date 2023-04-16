@@ -1,5 +1,4 @@
-import Image from "next/image";
-import urlFor from "../../../lib/urlFor";
+import { ExperienceCard } from "./ExperienceCard";
 
 type Props = {
   experiences: Experience[];
@@ -8,36 +7,17 @@ type Props = {
 export function Experience({ experiences }: Props) {
   return (
     <div className="flex relative flex-col text-left max-w-7xl px-5 justify-evenly mx-auto items-center h-fit py-10 space-y-10">
-      <h3 className=" text-gray-800 text-lg sm:text-xl">
+      <h3 className="text-gray-800 text-lg text-left">
         My Recent Work Experience
       </h3>
 
-      <h3 className="text-gray-500 text-sm text-center">
+      <span className="text-gray-500 text-sm text-center">
         Here are a few past projects I&#39;ve worked on since 2019
-      </h3>
+      </span>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mb-12 content-center">
         {experiences.map((exp) => (
-          <div
-            key={exp._id}
-            className="bg-white flex flex-col rounded-lg min-h-[19rem] p-8"
-          >
-            <div className="flex-1">
-              <h3 className="text-lg lg:text-xl font-bold text-center mb-4">
-                {exp.company}
-              </h3>
-              <p className="text-[14px]">{exp.points}</p>
-            </div>
-            <div className="flex items-center w-full justify-center">
-              <Image
-                src={urlFor(exp.companyImage).url()}
-                alt="profile"
-                width={160}
-                height={160}
-                className="w-28 h-24 object-contain"
-              />
-            </div>
-          </div>
+          <ExperienceCard experience={exp} key={exp._id} />
         ))}
       </div>
 

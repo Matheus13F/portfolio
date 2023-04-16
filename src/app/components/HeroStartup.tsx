@@ -9,7 +9,10 @@ export function HeroStartup() {
             hundreds of web and mobile apps across different industries and
             verticals. Ultimately, I decided it would be a fun challenge to try
             to design and build my own. So here are some of the projects
-            I&#39;ve been working on.
+            I&#39;ve been working on. You can always check all my projects on my{" "}
+            <a href="https://github.com/matheus13f" className="underline">
+              Github here
+            </a>
           </p>
         </div>
       </div>

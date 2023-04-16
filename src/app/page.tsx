@@ -14,6 +14,7 @@ import { Testimonials } from "./components/Testimonials";
 import { fetchBackground } from "./utils/fetchBackground";
 import { fetchTestimonial } from "./utils/fetchTestimonial";
 import project from "../../schemas/project";
+import { HeaderContactMe } from "./components/HeaderContactMe";
 
 export default async function Home() {
   const pageInfo: PageInfo = await fetchPageInfo();
@@ -28,7 +29,7 @@ export default async function Home() {
       className="h-screen overflow-scroll z-0 
       overflow-y-scroll overflow-x-hidden scrollbar md:scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-yellow/80 md:scrollbar-track-gray-900 scrollbar-none"
     >
-      <Header pageInfo={pageInfo} />
+      <HeaderContactMe />
 
       <section>
         <Hero pageInfo={pageInfo} />

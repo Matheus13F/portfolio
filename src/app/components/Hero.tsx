@@ -14,7 +14,7 @@ export function Hero({ pageInfo }: Props) {
         </h1>
 
         <span className="text-gray-800">
-          I design and code beautifully simple things, and I love what I do.
+          I code beautifully simple things, and I love what I do.
         </span>
 
         <Image
@@ -22,7 +22,7 @@ export function Hero({ pageInfo }: Props) {
           alt="profile"
           width={500}
           height={500}
-          className="relative rounded-full w-40 mx-auto object-cover mb-0 sm:mb-56 md:mb-52"
+          className="relative rounded-full bg-yellow w-40 mx-auto object-cover mb-0 sm:mb-56 md:mb-52"
         />
         <Image
           src={urlFor(pageInfo?.backgroundImage).url()}

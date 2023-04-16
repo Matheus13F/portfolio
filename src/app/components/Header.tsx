@@ -22,7 +22,7 @@ export function Header({ pageInfo }: Props) {
         <a href="https://codepeek.com.br">My Blog</a>
         <a
           href="/contact"
-          className=" rounded-lg text-sm p-2 border-2 border-yellow"
+          className="rounded-lg text-sm p-2 border-2 border-yellow hover:bg-yellow hover:text-white transition-colors duration-200"
         >
           Say hello
         </a>

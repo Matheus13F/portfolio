@@ -1,6 +1,13 @@
 import Image from "next/image";
 import urlFor from "../../../lib/urlFor";
 
+import { Merriweather } from "next/font/google";
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+});
+
 type Props = {
   testimonial: Testimonial[];
 };
@@ -27,8 +34,11 @@ export function Testimonials({ testimonial }: Props) {
             className="rounded-full w-24 h-24 object-cover"
           />
 
-          <p className="max-w-2xl text-xl text-center">{review.description}</p>
-
+          <div className={merriweather.className}>
+            <p className="max-w-2xl text-xl text-center">
+              {review.description}
+            </p>
+          </div>
           <div className="flex flex-col space-y-3 text-center">
             <a href={review.linkToPage} className="font-bold text-lg">
               {review.name}
