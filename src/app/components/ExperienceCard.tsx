@@ -8,7 +8,7 @@ interface Props {
 
 export function ExperienceCard({ experience }: Props) {
   const dateStarted = new Date(experience?.dateStarted).toLocaleDateString(
-    "pt-BR",
+    "en-US",
     {
       month: "long",
       year: "numeric",
@@ -16,7 +16,7 @@ export function ExperienceCard({ experience }: Props) {
   );
 
   const dateEnded = experience?.dateEnded
-    ? new Date(experience?.dateEnded).toLocaleDateString("pt-BR", {
+    ? new Date(experience?.dateEnded).toLocaleDateString("en-US", {
         month: "long",
         year: "numeric",
       })
