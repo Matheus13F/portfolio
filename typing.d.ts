@@ -25,6 +25,7 @@ interface PageInfo extends SanityBody {
   profilePic: Image;
   avatar: Image;
   backgroundImage: Image;
+  socials: Social[];
 }
 
 interface Experience extends SanityBody {

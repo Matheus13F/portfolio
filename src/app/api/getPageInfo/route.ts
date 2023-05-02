@@ -3,7 +3,10 @@ import { client } from "../../../../lib/sanity.client";
 import { NextResponse } from "next/server";
 
 const query = groq`
- *[_type == "pageInfo"][0]
+ *[_type == "pageInfo"][0] {
+  ...,
+  socials[]->
+ }
 `;
 
 export async function GET() {
