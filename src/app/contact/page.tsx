@@ -1,7 +1,7 @@
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-import { HeaderContactMe } from "../../components/Header";
+import { Header } from "../../components/Header";
 
 type Inputs = {
   nome: string;
@@ -19,7 +19,7 @@ export default function Contact() {
 
   return (
     <>
-      <HeaderContactMe />
+      <Header />
       <div className="h-[calc(100vh-96px)] relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center overflow-hidden">
         <div className="flex flex-col justify-evenly mt-16 gap-5">
           <h4 className="text-base sm:text-2xl md:text-4xl text-center max-w-2xl">
