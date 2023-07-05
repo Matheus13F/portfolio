@@ -1,4 +1,4 @@
-import urlFor from "../../../lib/urlFor";
+import urlFor from "../../lib/urlFor";
 import Image from "next/image";
 
 type Props = {
@@ -18,7 +18,7 @@ export function About({ pageInfo }: Props) {
         />
         <div className="space-y-10 pl-0 md:pl-10 text-center max-w-3xl my-48">
           <h4 className="text-4xl font-semibold">
-            Hi, I&#39;m Matheus , Nice to meet you.
+            Oi! Sou o Matheus Goes, prazer.
           </h4>
           <p className="text-base">{pageInfo?.backgroundInformation}</p>
         </div>

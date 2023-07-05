@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
+import { fetchPageInfo } from "../../utils/fetchPageInfo";
 import urlFor from "../../../lib/urlFor";
 import Link from "next/link";
 

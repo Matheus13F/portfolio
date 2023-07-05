@@ -1,5 +1,5 @@
 import Image from "next/image";
-import urlFor from "../../../lib/urlFor";
+import urlFor from "../../lib/urlFor";
 import { CalendarDaysIcon } from "@heroicons/react/24/solid";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 
 export function ExperienceCard({ experience }: Props) {
   const dateStarted = new Date(experience?.dateStarted).toLocaleDateString(
-    "en-US",
+    "pt-BR",
     {
       month: "long",
       year: "numeric",
@@ -16,11 +16,11 @@ export function ExperienceCard({ experience }: Props) {
   );
 
   const dateEnded = experience?.dateEnded
-    ? new Date(experience?.dateEnded).toLocaleDateString("en-US", {
+    ? new Date(experience?.dateEnded).toLocaleDateString("pt-BR", {
         month: "long",
         year: "numeric",
       })
-    : "Currently working here";
+    : "Atualmente";
 
   return (
     <div className="bg-white flex flex-col rounded-lg min-h-[19rem] p-5">

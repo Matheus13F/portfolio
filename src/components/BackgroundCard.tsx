@@ -39,7 +39,7 @@ export function BackgroundCard({ background }: Props) {
 function getIcon(type: string) {
   if (type === "Designer")
     return <SquaresPlusIcon className="w-10 h-10 text-white" />;
-  else if (type === "Frontend Software Engineer")
+  else if (type === "Desenvolvedor Frontend")
     return <CodeBracketIcon className="w-10 h-10 text-white" />;
   else return <BookmarkIcon className="w-10 h-10 text-white" />;
 }

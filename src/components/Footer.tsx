@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
-import urlFor from "../../../lib/urlFor";
+import urlFor from "../../lib/urlFor";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 
 type Props = {
@@ -14,12 +14,11 @@ export function Footer({ socials, pageInfo }: Props) {
       <div className="w-full md:w-4/5 h-auto shadow-3xl -mt-20 z-40 px-4 bg-green-dark flex flex-col md:flex-row divide-y-2 md:divide-x-[1px] rounded-lg">
         <article className="flex flex-col md:flex-row space-y-10 rounded-lg items-center justify-center flex-shrink-0 w-full px-2 py-6">
           <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
-            <span className="text-3xl font-bold">Start a project</span>
+            <span className="text-3xl font-bold">Comece um projeto</span>
           </div>
           <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
             <p className="text-white">
-              Interested in working together? We should queue up a time to chat.
-              I&#39;ll buy the coffee.
+              Interessado em trabalhar comigo? Vamos conversar. Eu pago o café.
             </p>
           </div>
           <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
@@ -28,7 +27,7 @@ export function Footer({ socials, pageInfo }: Props) {
               className="p-5 rouinded border-2 border-yellow rounded-lg hover:bg-yellow/90 transition-colors ease-in flex gap-5"
             >
               <RocketLaunchIcon className="h-7 w-7 text-white" />
-              Let&#39;s do this
+              Vamos começar
             </a>
           </div>
         </article>
@@ -43,7 +42,7 @@ export function Footer({ socials, pageInfo }: Props) {
           className="rounded-lg w-20 h-20 object-cover"
         />
         <span className="text-white text-2xl max-w-md text-center">
-          Living, learning, & leveling up one day at a time.
+          Vivendo, Aprendendo, & Evoluindo um dia de cada vez.
         </span>
 
         <div>
@@ -57,7 +56,9 @@ export function Footer({ socials, pageInfo }: Props) {
           ))}
         </div>
 
-        <span className="text-white text-md">Handcrafted by me © 2023</span>
+        <span className="text-white text-md">
+          Feito a mão por eu mesmo © 2023
+        </span>
       </div>
     </div>
   );

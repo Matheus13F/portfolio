@@ -4,7 +4,7 @@ import {
   ShareIcon,
 } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import urlFor from "../../../lib/urlFor";
+import urlFor from "../../lib/urlFor";
 
 type Props = {
   projects: Project[];

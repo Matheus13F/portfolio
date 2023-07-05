@@ -1,5 +1,5 @@
 import Image from "next/image";
-import urlFor from "../../../lib/urlFor";
+import urlFor from "../../lib/urlFor";
 
 type Props = {
   pageInfo: PageInfo;
@@ -14,7 +14,8 @@ export function Hero({ pageInfo }: Props) {
         </h1>
 
         <span className="text-gray-800">
-          I code beautifully simple things, and I love what I do.
+          Eu escrevo codigos e desenvolvo coisas simples e bonitas, e amo o que
+          eu faço.
         </span>
 
         <Image

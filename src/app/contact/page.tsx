@@ -1,20 +1,20 @@
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-import { HeaderContactMe } from "../components/HeaderContactMe";
+import { HeaderContactMe } from "../../components/Header";
 
 type Inputs = {
-  name: string;
+  nome: string;
   email: string;
-  subject: string;
-  message: string;
+  assunto: string;
+  mensagem: string;
 };
 
 export default function Contact() {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:mattew.marketing@gmail.com?subject=${formData.subject}&body=Hi, my name 
-    is ${formData.name}. ${formData.message} (${formData.email})`;
+    window.location.href = `mailto:mattew.marketing@gmail.com?subject=${formData.assunto}&body=Hi, my name 
+    is ${formData.nome}. ${formData.mensagem} (${formData.email})`;
   };
 
   return (
@@ -23,10 +23,10 @@ export default function Contact() {
       <div className="h-[calc(100vh-96px)] relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center overflow-hidden">
         <div className="flex flex-col justify-evenly mt-16 gap-5">
           <h4 className="text-base sm:text-2xl md:text-4xl text-center max-w-2xl">
-            Thanks for taking the time to reach out.
+            Obrigado por entrar em contato comigo.
             <span className="underline decoration-yellow/50">
               {" "}
-              How can I help you today?.
+              Como posso te ajudar hoje?.
             </span>
           </h4>
 
@@ -35,9 +35,9 @@ export default function Contact() {
             className="flex flex-col space-y-2 mx-auto max-w-4xl w-full px-5 mt-5"
           >
             <input
-              {...register("name")}
+              {...register("nome")}
               className="contactInput"
-              placeholder="Name"
+              placeholder="Nome"
               required
               type="text"
             />
@@ -50,24 +50,24 @@ export default function Contact() {
             />
 
             <input
-              {...register("subject")}
+              {...register("assunto")}
               className="contactInput"
-              placeholder="Subject"
+              placeholder="Assunto"
               required
               type="text"
             />
 
             <textarea
-              {...register("message")}
+              {...register("mensagem")}
               className="contactInput"
-              placeholder="Message"
+              placeholder="Mensagem"
               required
             />
             <button
               type="submit"
               className="bg-yellow py-5 px-10 rounded-md text-white font-bold text-lg"
             >
-              Submit
+              Enviar
             </button>
           </form>
         </div>
