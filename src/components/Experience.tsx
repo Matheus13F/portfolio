@@ -7,11 +7,11 @@ type Props = {
 export function Experience({ experiences }: Props) {
   return (
     <div className="flex relative flex-col text-left max-w-7xl px-5 justify-evenly mx-auto items-center h-fit py-10 space-y-10">
-      <h3 className="text-gray-800 text-lg text-left">
+      <h3 className="text-gray-800 text-2xl text-left">
         Minhas experiências recentes
       </h3>
 
-      <span className="text-gray-500 text-sm text-center">
+      <span className="text-gray-500 text-base text-center">
         Aqui estão alguns projetos anteriores em que trabalhei desde 2018
       </span>
 

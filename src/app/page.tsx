@@ -25,7 +25,7 @@ export default async function Home() {
   return (
     <div
       className="h-screen overflow-scroll z-0 
-      overflow-y-scroll overflow-x-hidden scrollbar md:scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-yellow/80 md:scrollbar-track-gray-900 scrollbar-none"
+      overflow-y-scroll overflow-x-hidden scrollbar md:scrollbar-thin md:scrollbar-thumb-yellow/80 md:scrollbar-track-gray-900 scrollbar-none"
     >
       <Header />
 
@@ -41,7 +41,10 @@ export default async function Home() {
         <Background background={background} />
       </section>
 
-      <section className="border-b-[1px] border-gray-300 pb-10">
+      <section
+        id="experiencia"
+        className="border-b-[1px] border-gray-300 pb-10"
+      >
         <Experience experiences={experiences} />
       </section>
 
@@ -49,7 +52,7 @@ export default async function Home() {
         <HeroStartup />
       </section>
 
-      <section className="border-b-[1px] border-gray-300 pb-10">
+      <section id="projetos" className="border-b-[1px] border-gray-300 pb-10">
         <Projects projects={projects} />
       </section>
 

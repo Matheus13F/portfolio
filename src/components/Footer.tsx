@@ -23,7 +23,7 @@ export function Footer({ socials, pageInfo }: Props) {
           </div>
           <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
             <a
-              href="/contact"
+              href="/contato"
               className="p-5 rouinded border-2 border-yellow rounded-lg hover:bg-yellow/90 transition-colors ease-in flex gap-5"
             >
               <RocketLaunchIcon className="h-7 w-7 text-white" />

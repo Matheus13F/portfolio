@@ -40,7 +40,7 @@ export function Projects({ projects }: Props) {
                   className="flex items-center text-base font-medium gap-2 p-1 bg-green/10  rounded-lg text-green "
                 >
                   <ArrowTopRightOnSquareIcon className="w-4 h-4 text-green" />
-                  See it in prod
+                  Produção
                 </a>
               ) : (
                 <a
@@ -49,7 +49,7 @@ export function Projects({ projects }: Props) {
                 >
                   {" "}
                   <ShareIcon className="w-4 h-4 text-black" />
-                  See the repo
+                  GitHub
                 </a>
               )}
             </div>
@@ -58,19 +58,16 @@ export function Projects({ projects }: Props) {
       </div>
 
       <div className="w-full flex flex-col space-y-5 items-center">
-        <h3 className="font-bold text-xl">
-          Interested in collaborating with me?
-        </h3>
+        <h3 className="font-bold text-xl">Interessado em trabalhar comigo?</h3>
         <span className="text-center">
-          I&#39;m always open to discussing product design work or partnership
-          opportunities.
+          Estou sempre aberto a novas ideias e oportunidades.
         </span>
         <a
-          href="/contact"
+          href="/contato"
           className="p-5 bg-yellow rounded-lg hover:bg-yellow/90 transition-colors ease-in max-w-10 flex items-center gap-5 text-white"
         >
           <ChatBubbleBottomCenterIcon className="w-7 h-7 text-white" />
-          Start a conversation
+          Fale comigo
         </a>
       </div>
     </div>

@@ -13,10 +13,12 @@ export function Hero({ pageInfo }: Props) {
           {pageInfo?.role}
         </h1>
 
-        <span className="text-gray-800">
-          Eu escrevo codigos e desenvolvo coisas simples e bonitas, e amo o que
-          eu faço.
-        </span>
+        <div className="w-full p-2 flex justify-center">
+          <p className="text-gray-800 max-w-2xl w-full text-center">
+            Eu escrevo códigos, desenvolvo coisas simples e bonitas, compartilho
+            meu conhecimento e amo o que eu faço.
+          </p>
+        </div>
 
         <Image
           src={urlFor(pageInfo?.avatar).url()}

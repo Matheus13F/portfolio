@@ -15,10 +15,10 @@ type Props = {
 export function Testimonials({ testimonial }: Props) {
   return (
     <div className="flex relative flex-col text-left max-w-7xl px-5 justify-evenly mx-auto items-center h-fit py-10 space-y-10">
-      <h3 className=" text-gray-800 font-bold text-2xl">Testimonials</h3>
+      <h3 className=" text-gray-800 font-bold text-2xl">Depoimentos</h3>
 
       <h3 className="text-gray-800 text-lg text-center">
-        People I&#39;ve worked with have said some nice things...
+        Pessoa com quem eu ja trabalhei disseram algumas coisas...
       </h3>
 
       {testimonial.map((review) => (
