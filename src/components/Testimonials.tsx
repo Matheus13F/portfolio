@@ -18,7 +18,7 @@ export function Testimonials({ testimonial }: Props) {
       <h3 className=" text-gray-800 font-bold text-2xl">Depoimentos</h3>
 
       <h3 className="text-gray-800 text-lg text-center">
-        Pessoa com quem eu ja trabalhei disseram algumas coisas...
+        Pessoas com quem ja trabalhei disseram algumas coisas...
       </h3>
 
       {testimonial.map((review) => (

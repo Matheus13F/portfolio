@@ -23,7 +23,7 @@ export function Experience({ experiences }: Props) {
 
       <a
         href="https://www.linkedin.com/in/matheus13f/"
-        className="p-5 bg-yellow rounded-lg hover:bg-yellow/90 transition-colors ease-in text-white"
+        className="p-5 bg-yellow rounded-lg hover:bg-yellow/90 transition-colors ease-in text-white text-center"
       >
         Veja mais no LinkedIn
       </a>
