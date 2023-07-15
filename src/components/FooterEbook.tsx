@@ -1,11 +1,3 @@
-import Image from "next/image";
-import { RocketLaunchIcon } from "@heroicons/react/24/solid";
-
-type Props = {
-  socials: Social[];
-  pageInfo: PageInfo;
-};
-
 export default function FooterEbook() {
   return (
     <div className="flex flex-col text-center md:text-left justify-evenly mx-auto items-center w-full h-auto bg-green-dark text-white px-5">
