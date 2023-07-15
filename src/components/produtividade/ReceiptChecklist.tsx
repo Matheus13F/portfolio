@@ -2,11 +2,11 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import React from "react";
 
-function ConteudoEbook() {
+export default function ReceiptChecklist() {
   return (
     <div className="flex mx-auto w-full max-w-7xl px-10 justify-evenly flex-col md:flex-row py-5 md:py-20 gap-5 md:gap-0">
       <div className="flex flex-col space-y-5 gap-4 justify-center">
-        <h1 className="text-5xl max-w-2xl font-bold text-gray-700 text-center md:text-left">
+        <h1 className="text-3xl lg:text-4xl 2xl:text-5xl max-w-2xl font-bold text-gray-700 text-center md:text-left">
           O que você vai <span className="text-yellow">receber:</span>
         </h1>
         <ul className="space-y-5">
@@ -32,7 +32,8 @@ function ConteudoEbook() {
           </li>
           <li className="flex items-center gap-5">
             <CheckIcon className="text-green-dark w-5 h-5" />
-            Tudo que você precisa pra dominar o chatGPT
+            Guia para ChatGPT, Google Bard, Bing ou qualquer outra <br /> IA
+            Generativa
           </li>{" "}
         </ul>
         <div className="w-full flex justify-center md:justify-start">
@@ -57,5 +58,3 @@ function ConteudoEbook() {
     </div>
   );
 }
-
-export default ConteudoEbook;

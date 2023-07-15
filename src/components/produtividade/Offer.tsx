@@ -1,6 +1,14 @@
 import Image from "next/image";
+import {
+  FaBarcode,
+  FaCcMastercard,
+  FaCcVisa,
+  FaGooglePay,
+  FaPaypal,
+} from "react-icons/fa";
+import { FaPix } from "react-icons/fa6";
 
-function Oferta() {
+export default function Offer() {
   return (
     <div className="flex flex-col md:flex-row mx-auto w-full max-w-7xl px-10 justify-evenly py-5 md:py-20 gap-10 md:gap-5 bg-white my-20 rounded-md">
       <div className="flex flex-col space-y-5 gap-4 pr-6">
@@ -15,8 +23,13 @@ function Oferta() {
           R$ 27,00
         </span>
         <p className="inline-block p-0 m-0 text-center">ou em 3 x de R$ 9,53</p>
-        <span className="text-center">
-          Cartão de crédito | Boleto | Google Pay | PayPal | Pix
+        <span className="flex gap-2 items-center justify-center">
+          <FaCcMastercard size={35} />
+          <FaCcVisa size={35} />
+          <FaBarcode size={35} />
+          <FaGooglePay size={35} />
+          <FaPaypal size={35} />
+          <FaPix size={35} />
         </span>
         <div className="w-full flex justify-center">
           <a
@@ -40,5 +53,3 @@ function Oferta() {
     </div>
   );
 }
-
-export default Oferta;

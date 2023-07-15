@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FaLinkedin, FaInstagram, FaGithub, FaLink } from "react-icons/fa";
 
-function QuemSouEu() {
+export default function AboutMeProductivity() {
   return (
     <div className="flex mx-auto w-full max-w-7xl px-10 justify-evenly py-20 gap-5 bg-white my-20 rounded-md">
       <div className="flex flex-col space-y-5 gap-4 pr-6">
@@ -64,5 +64,3 @@ function QuemSouEu() {
     </div>
   );
 }
-
-export default QuemSouEu;

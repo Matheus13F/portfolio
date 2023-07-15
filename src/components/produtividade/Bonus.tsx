@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-export default function Garantia() {
+export default function Bonus() {
   return (
     <div className="w-full max-w-7xl px-10 mx-auto flex justify-center items-center flex-col space-y-4 my-5 md:my-20 py-10 gap-10">
       <h3 className="text-5xl text-center md:text-left">4 Bônus Exclusivos</h3>

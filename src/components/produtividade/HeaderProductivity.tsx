@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { LinkPeek } from "../LinkPeek";
 
-export function HeaderProducts() {
+export function HeaderProductivity() {
   return (
     <div className="flex justify-between max-w-7xl mx-auto items-center h-24 px-10">
       <div className="flex flex-row items-center">
