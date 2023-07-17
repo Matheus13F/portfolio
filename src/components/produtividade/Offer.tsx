@@ -17,12 +17,12 @@ export default function Offer() {
           produtividade
         </strong>
         <p className="inline-block p-0 m-0 text-center">
-          de <span className="line-through">R$ 97,00</span> por apenas
+          de <span className="line-through">R$ 67,00</span> por apenas
         </p>
         <span className="inline-block max-w-4xl text-5xl md:text-6xl lg:text-7xl text-center font-bold text-yellow">
-          R$ 27,00
+          R$ 10,00
         </span>
-        <p className="inline-block p-0 m-0 text-center">ou em 3 x de R$ 9,53</p>
+        {/* <p className="inline-block p-0 m-0 text-center">ou em 3 x de R$ 9,53</p> */}
         <span className="flex gap-2 items-center justify-center">
           <FaCcMastercard size={35} />
           <FaCcVisa size={35} />
