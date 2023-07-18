@@ -7,7 +7,7 @@ export default function Produtos() {
       <Header />
       <div className="h-[600px] w-full flex items-center justify-center flex-col gap-10">
         <span className="text-sm text-center">
-          Todos os meu produtos listados aqui
+          Todos os meus ebooks listados aqui
         </span>
         <div className="flex flex-col space-y-4">
           <Link
@@ -22,6 +22,12 @@ export default function Produtos() {
             className="text-gray-400 p-2 border border-gray-400 rounded-md flex items-center justify-center cursor-not-allowed"
           >
             Landing Page com IA
+          </button>
+          <button
+            disabled
+            className="text-gray-400 p-2 border border-gray-400 rounded-md flex items-center justify-center cursor-not-allowed"
+          >
+            Dev no Exterior
           </button>
           <button
             disabled
