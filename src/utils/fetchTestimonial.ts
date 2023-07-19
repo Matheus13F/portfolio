@@ -2,7 +2,7 @@ export async function fetchTestimonial() {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getTestimonial`,
     {
-      cache: "no-store",
+      cache: "default",
     }
   );
 
