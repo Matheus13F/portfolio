@@ -31,7 +31,7 @@ export function Header() {
         >
           Projetos
         </a>
-        <LinkPeek href="/produtos" title="E-books" />
+        {/* <LinkPeek href="/produtos" title="E-books" /> */}
 
         <LinkPeek href="https://codepeek.com.br" title="Meu Blog" />
         <Link
