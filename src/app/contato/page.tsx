@@ -70,6 +70,13 @@ export default function Contact() {
               Enviar
             </button>
           </form>
+          <a
+            href="https://linktr.ee/math_codes"
+            className="text-center text-yellow underline"
+            target="_blank"
+          >
+            Ou fale comigo pelas redes sociais
+          </a>
         </div>
       </div>
     </>

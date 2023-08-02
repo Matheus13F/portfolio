@@ -19,12 +19,6 @@ export function Header() {
 
       <div className="flex space-x-1 md:space-x-5 items-center text-gray-900 cursor-pointer text-xs md:text-sm">
         <a
-          href="/newsletter"
-          className="p-2 hover:text-yellow hover:underline transition-colors duration-200 hidden sm:flex"
-        >
-          Newsletter
-        </a>
-        <a
           href="#experiencia"
           className="p-2 hover:text-yellow hover:underline transition-colors duration-200 hidden sm:flex"
         >
@@ -36,6 +30,12 @@ export function Header() {
           className="p-2 hover:text-yellow hover:underline transition-colors duration-200 hidden sm:flex"
         >
           Projetos
+        </a>
+        <a
+          href="/newsletter"
+          className="p-2 hover:text-yellow hover:underline transition-colors duration-200 hidden sm:flex"
+        >
+          Newsletter
         </a>
         <LinkPeek href="/produtos" title="E-books" />
 
