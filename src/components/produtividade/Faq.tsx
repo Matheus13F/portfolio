@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "./Card";
 import { FaqBox } from "./FaqBox";
 
 export default function Faq() {

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { HeaderProductivity } from "@/components/produtividade/HeaderProductivity";
 import BannerOng from "@/components/produtividade/BannerOng";
 import HeroProductivity from "@/components/produtividade/HeroProductivity";
@@ -8,6 +9,28 @@ import AboutMeProductivity from "@/components/produtividade/AboutMeProductivity"
 import Offer from "@/components/produtividade/Offer";
 import FooterEbook from "@/components/FooterEbook";
 import Faq from "@/components/produtividade/Faq";
+
+export const metadata: Metadata = {
+  title: "Produtividade com chatGPT",
+  description: "Produtividade com chatGPT ou Google Bard",
+  icons: {
+    icon: "/logo.png",
+  },
+  openGraph: {
+    images: ["/produtividade.png"],
+    title: "Matheus Goes",
+    description: "Matheus Goes Desenvolvedor",
+    type: "website",
+    url: "https://www.matheusgoes.tech/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Matheus Goes",
+    description: "Matheus Goes Desenvolvedor",
+    creator: "@oi_mattheww",
+    images: ["/produtividade.png"],
+  },
+};
 
 export default function Produtividade() {
   return (

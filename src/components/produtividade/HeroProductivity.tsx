@@ -18,7 +18,7 @@ export default function HeroProductivity() {
         </p>
         <div className="w-full flex justify-center md:justify-start">
           <a
-            href="https://pay.hotmart.com/G84637868O?checkoutMode=10"
+            href="#conteudo"
             className="inline-block px-2 py-4 text-white bg-yellow w-80 rounded-md hover:opacity-90 transition-colors ease-in text-center "
             target="_blank"
           >

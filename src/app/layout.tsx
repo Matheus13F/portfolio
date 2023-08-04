@@ -11,10 +11,24 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Matheus",
+  title: "Matheus Goes",
   description: "Matheus Goes | Desenvolvedor",
   icons: {
     icon: "/logo.png",
+  },
+  openGraph: {
+    images: ["/eu.jpeg"],
+    title: "Matheus Goes",
+    description: "Matheus Goes Desenvolvedor",
+    type: "website",
+    url: "https://www.matheusgoes.tech/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Matheus Goes",
+    description: "Matheus Goes Desenvolvedor",
+    creator: "@oi_mattheww",
+    images: ["/eu.jpeg"],
   },
 };
 

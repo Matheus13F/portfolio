@@ -1,5 +1,29 @@
 import { Header } from "@/components/Header";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Ebooks sobre tecnologia",
+  description:
+    "Lista de ebooks e conteudo sobre tecnologia, IA e desenvolvimento web",
+  icons: {
+    icon: "/logo.png",
+  },
+  openGraph: {
+    images: ["/produtividade.png"],
+    title: "Matheus Goes",
+    description: "Matheus Goes Desenvolvedor",
+    type: "website",
+    url: "https://www.matheusgoes.tech/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Matheus Goes",
+    description: "Matheus Goes Desenvolvedor",
+    creator: "@oi_mattheww",
+    images: ["/produtividade.png"],
+  },
+};
 
 export default function Produtos() {
   return (
