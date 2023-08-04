@@ -12,21 +12,23 @@ import Faq from "@/components/produtividade/Faq";
 
 export const metadata: Metadata = {
   title: "Produtividade com chatGPT",
-  description: "Produtividade com chatGPT ou Google Bard",
+  description: "Ebook para aumentar a produtividade com chatGPT ou Google Bard",
   icons: {
     icon: "/logo.png",
   },
   openGraph: {
     images: ["/produtividade.png"],
-    title: "Matheus Goes",
-    description: "Matheus Goes Desenvolvedor",
+    title: "Aumente a produtividade com ChatGPT",
+    description:
+      "Ebook para aumentar a produtividade com chatGPT ou Google Bard",
     type: "website",
     url: "https://www.matheusgoes.tech/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Matheus Goes",
-    description: "Matheus Goes Desenvolvedor",
+    title: "Aumente a produtividade com ChatGPT",
+    description:
+      "Ebook para aumentar a produtividade com chatGPT ou Google Bard",
     creator: "@oi_mattheww",
     images: ["/produtividade.png"],
   },

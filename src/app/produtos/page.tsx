@@ -11,15 +11,17 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: ["/produtividade.png"],
-    title: "Matheus Goes",
-    description: "Matheus Goes Desenvolvedor",
+    title: "Matheus Goes | Ebooks",
+    description:
+      "Lista de ebooks e conteudo sobre tecnologia, IA e desenvolvimento web",
     type: "website",
     url: "https://www.matheusgoes.tech/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Matheus Goes",
-    description: "Matheus Goes Desenvolvedor",
+    title: "Matheus Goes | Ebooks",
+    description:
+      "Lista de ebooks e conteudo sobre tecnologia, IA e desenvolvimento web",
     creator: "@oi_mattheww",
     images: ["/produtividade.png"],
   },
