@@ -7,8 +7,8 @@ type Props = {
 
 export function Hero({ pageInfo }: Props) {
   return (
-    <div className="flex flex-col space-y-8 items-center justify-center text-center relative h-[calc(100vh-96px)]">
-      <div className="z-20 space-y-10 flex flex-col justify-evenly sm:justify-normal overflow-hidden mt-20 md:mt-32 px-10">
+    <div className="flex flex-col space-y-8 items-center justify-center text-center relative h-auto sm:h-[calc(100vh-96px)]">
+      <div className="z-20 space-y-10 flex flex-col justify-evenly sm:justify-normal overflow-hidden mt-8 md:mt-32 py-10 sm:py-0 px-10">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold scroll-px-10 text-gray-700">
           {pageInfo?.role}
         </h1>
@@ -25,7 +25,7 @@ export function Hero({ pageInfo }: Props) {
           alt="profile"
           width={500}
           height={500}
-          className="relative rounded-full bg-yellow w-40 mx-auto object-cover mb-0 sm:mb-56 md:mb-52"
+          className="relative rounded-full bg-yellow w-40 mx-auto object-cover mb-0 xs:mb-64 sm:mb-56 md:mb-52"
         />
         <Image
           src={urlFor(pageInfo?.backgroundImage).url()}

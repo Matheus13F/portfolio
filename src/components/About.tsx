@@ -16,11 +16,11 @@ export function About({ pageInfo }: Props) {
           height={169}
           className="hidden md:inline-block rounded-lg w-20 h-32 md:h-72 md:w-64 object-cover"
         />
-        <div className="space-y-10 pl-0 md:pl-10 text-center max-w-3xl my-48">
-          <h4 className="text-4xl font-semibold">
+        <div className="space-y-5 md:space-y-10 pl-0 md:pl-10 text-center max-w-3xl my-48">
+          <h4 className="text-2xl md:text-4xl font-semibold">
             Ola! Sou o Matheus Goes, prazer.
           </h4>
-          <p className="text-base">{pageInfo?.backgroundInformation}</p>
+          <p className="text-sm md:text-base">{pageInfo?.backgroundInformation}</p>
         </div>
       </div>
     </div>

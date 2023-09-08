@@ -32,7 +32,7 @@ export function Projects({ projects }: Props) {
                 alt="profile"
                 width={160}
                 height={169}
-                className="rounded-lg w-36 h-28 object-cover"
+                className="rounded-lg w-28 xs:w-36 h-28 object-cover"
               />
               {project.linkToBuild ? (
                 <a
@@ -58,7 +58,7 @@ export function Projects({ projects }: Props) {
       </div>
 
       <div className="w-full flex flex-col space-y-5 items-center">
-        <h3 className="font-bold text-xl">Interessado em trabalhar comigo?</h3>
+        <h3 className="font-bold text-xl text-center">Interessado em trabalhar comigo?</h3>
         <span className="text-center">
           Estou sempre aberto a novas ideias e oportunidades.
         </span>

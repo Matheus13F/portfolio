@@ -17,7 +17,7 @@ export function Footer({ socials, pageInfo }: Props) {
             <span className="text-3xl font-bold">Comece um projeto</span>
           </div>
           <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
-            <p className="text-white">
+            <p className="text-white text-center">
               Interessado em trabalhar comigo? Vamos conversar. Eu pago o café.
             </p>
           </div>
