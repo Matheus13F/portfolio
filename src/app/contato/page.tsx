@@ -20,8 +20,8 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <div className="h-[calc(100vh-96px)] relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center overflow-hidden">
-        <div className="flex flex-col justify-evenly mt-16 gap-5">
+      <div className="h-auto md:h-[calc(100vh-96px)] md:flex">
+        <div className="flex flex-col mt-6 md:mt-16 gap-2 md:gap-5 px-2 bg-blue mx-auto">
           <h4 className="text-base sm:text-2xl md:text-4xl text-center max-w-2xl">
             Obrigado por entrar em contato comigo.
             <span className="underline decoration-yellow/50">
@@ -32,7 +32,7 @@ export default function Contact() {
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-2 mx-auto max-w-4xl w-full px-5 mt-5"
+            className="flex flex-col space-y-2 px-0 md:px-5 mt-5"
           >
             <input
               {...register("nome")}
@@ -72,7 +72,7 @@ export default function Contact() {
           </form>
           <a
             href="https://linktr.ee/math_codes"
-            className="text-center text-yellow underline"
+            className="text-center text-yellow text-sm"
             target="_blank"
           >
             Ou fale comigo pelas redes sociais
