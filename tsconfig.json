@@ -29,6 +29,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "index.js"
-  ],
+, "src/utils/restOperator.js"  ],
   "exclude": ["node_modules"]
 }

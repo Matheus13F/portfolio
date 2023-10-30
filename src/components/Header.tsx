@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { LinkPeek } from "./LinkPeek";
+import { LinkPeek } from "./Form/LinkPeek";
 import Link from "next/link";
+import { NavLink } from "./Form/NavLink";
 
 export function Header() {
   return (
@@ -18,25 +19,12 @@ export function Header() {
       </div>
 
       <div className="flex space-x-1 md:space-x-5 items-center text-gray-900 cursor-pointer text-xs md:text-sm">
-        <a
-          href="#experiencia"
-          className="p-2 hover:text-yellow hover:underline transition-colors duration-200 hidden sm:flex"
-        >
-          Experiência
-        </a>
 
-        <a
-          href="#projetos"
-          className="p-2 hover:text-yellow hover:underline transition-colors duration-200 hidden sm:flex"
-        >
-          Projetos
-        </a>
-        <a
-          href="/newsletter"
-          className="p-2 hover:text-yellow hover:underline transition-colors duration-200 hidden sm:flex"
-        >
-          Newsletter
-        </a>
+        <NavLink url="#experiencia" title="Experiência" />
+
+        <NavLink url="#projetos" title="Projetos" />
+        <NavLink url="/newsletter" title="Newsletter" />
+       
         <LinkPeek href="/produtos" title="E-books" />
 
         <LinkPeek href="https://codepeek.com.br" title="Blog" />

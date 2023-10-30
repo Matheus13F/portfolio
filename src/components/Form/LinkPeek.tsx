@@ -11,7 +11,7 @@ export function LinkPeek({ href, title, responsive = false }: LinkPeekProps) {
   return (
     <a
       href={href}
-      className={`p-2 hover:text-yellow hover:underline transition-colors duration-200 ${isResponsive}`}
+      className={`p-2 hover:text-yellow transition-colors duration-200 ${isResponsive}`}
     >
       {title}
     </a>

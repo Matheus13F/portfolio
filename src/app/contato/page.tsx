@@ -23,11 +23,7 @@ export default function Contact() {
       <div className="h-auto md:h-[calc(100vh-96px)] md:flex">
         <div className="flex flex-col mt-6 md:mt-16 gap-2 md:gap-5 px-2 bg-blue mx-auto">
           <h4 className="text-base sm:text-2xl md:text-4xl text-center max-w-2xl">
-            Obrigado por entrar em contato comigo.
-            <span className="underline decoration-yellow/50">
-              {" "}
-              Como posso te ajudar hoje?.
-            </span>
+            Como posso te ajudar hoje?
           </h4>
 
           <form

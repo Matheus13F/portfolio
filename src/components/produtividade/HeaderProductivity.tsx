@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LinkPeek } from "../LinkPeek";
+import { LinkPeek } from "../Form/LinkPeek";
 
 export function HeaderProductivity() {
   return (
