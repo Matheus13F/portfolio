@@ -19,15 +19,14 @@ export function Header() {
       </div>
 
       <div className="flex space-x-1 md:space-x-5 items-center text-gray-900 cursor-pointer text-xs md:text-sm">
-
         <NavLink url="#experiencia" title="Experiência" />
 
         <NavLink url="#projetos" title="Projetos" />
         <NavLink url="/newsletter" title="Newsletter" />
-       
+
         <LinkPeek href="/produtos" title="E-books" />
 
-        <LinkPeek href="https://codepeek.com.br" title="Blog" />
+        <LinkPeek href="https://codepilot.com.br" title="Blog" />
         <Link
           href="/contato"
           className=" rounded-lg p-2 border-2 border-yellow hover:bg-yellow hover:text-white transition-colors duration-200 text-center"
