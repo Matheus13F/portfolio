@@ -1,7 +1,8 @@
-import Image from "next/image";
-import { SocialIcon } from "react-social-icons";
-import urlFor from "../../lib/urlFor";
-import { RocketLaunchIcon } from "@heroicons/react/24/solid";
+import Image from 'next/image';
+import { SocialIcon } from 'react-social-icons';
+import urlFor from '../../lib/urlFor';
+import { RocketLaunchIcon } from '@heroicons/react/24/solid';
+import logoImage from '../../public/logo.png';
 
 type Props = {
   socials: Social[];
@@ -10,8 +11,8 @@ type Props = {
 
 export function Footer({ socials, pageInfo }: Props) {
   return (
-    <div className="flex flex-col text-center md:text-left justify-evenly mx-auto items-center w-full h-auto bg-yellow text-white px-5">
-      <div className="w-full md:w-4/5 h-auto shadow-3xl -mt-20 z-40 px-4 bg-green-dark flex flex-col md:flex-row divide-y-2 md:divide-x-[1px] rounded-lg">
+    <div className="flex flex-col text-center md:text-left justify-evenly mx-auto items-center w-full h-auto bg-gray-800 text-white px-5">
+      <div className="w-full md:w-4/5 h-auto shadow-3xl -mt-20 z-40 px-4 bg-emerald-900 flex flex-col md:flex-row divide-y-2 md:divide-x-[1px] rounded-lg">
         <article className="flex flex-col md:flex-row space-y-10 rounded-lg items-center justify-center flex-shrink-0 w-full px-2 py-6">
           <div className="w-full h-auto py-5 flex flex-col items-center text-center space-y-5">
             <span className="text-3xl font-bold">Comece um projeto</span>
@@ -35,7 +36,7 @@ export function Footer({ socials, pageInfo }: Props) {
 
       <div className="h-auto space-y-14 pb-16 flex flex-col items-center justify-center mt-28 w-full px-5">
         <Image
-          src={urlFor(pageInfo?.profilePic).url()}
+          src={logoImage}
           alt="profile"
           width={160}
           height={169}
@@ -57,7 +58,7 @@ export function Footer({ socials, pageInfo }: Props) {
         </div>
 
         <span className="text-white text-md">
-          Feito a mão por eu mesmo © 2023
+          Feito a mão por eu mesmo © 2024
         </span>
       </div>
     </div>

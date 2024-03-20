@@ -1,5 +1,5 @@
-import urlFor from "../../lib/urlFor";
-import Image from "next/image";
+import urlFor from '../../lib/urlFor';
+import Image from 'next/image';
 
 type Props = {
   pageInfo: PageInfo;
@@ -7,7 +7,7 @@ type Props = {
 
 export function About({ pageInfo }: Props) {
   return (
-    <div className="flex flex-col relative text-center md:text-left md:flex-row justify-evenly mx-auto items-center w-full max-h-[600px] bg-yellow text-white pb-20 px-5">
+    <div className="flex flex-col relative text-center md:text-left md:flex-row justify-evenly mx-auto items-center w-full max-h-[600px] bg-slate-600 text-white pb-20 px-5">
       <div className="max-w-7xl flex items-center justify-center">
         <Image
           src={urlFor(pageInfo?.heroImage).url()}
@@ -20,7 +20,9 @@ export function About({ pageInfo }: Props) {
           <h4 className="text-2xl md:text-4xl font-semibold">
             Ola! Sou o Matheus Goes, prazer.
           </h4>
-          <p className="text-sm md:text-base">{pageInfo?.backgroundInformation}</p>
+          <p className="text-sm md:text-base">
+            {pageInfo?.backgroundInformation}
+          </p>
         </div>
       </div>
     </div>

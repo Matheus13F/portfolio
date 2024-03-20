@@ -1,4 +1,4 @@
-import { ExperienceCard } from "./ExperienceCard";
+import { ExperienceCard } from './ExperienceCard';
 
 type Props = {
   experiences: Experience[];
@@ -7,11 +7,11 @@ type Props = {
 export function Experience({ experiences }: Props) {
   return (
     <div className="flex relative flex-col text-left max-w-7xl px-5 justify-evenly mx-auto items-center h-fit py-10 space-y-10">
-      <h3 className="text-gray-800 text-2xl text-center">
+      <h3 className="text-slate-900 text-2xl text-center">
         Minhas experiências recentes
       </h3>
 
-      <span className="text-gray-500 text-base text-center">
+      <span className="text-slate-600 text-base text-center">
         Aqui estão alguns projetos anteriores em que trabalhei desde 2018
       </span>
 
@@ -23,7 +23,7 @@ export function Experience({ experiences }: Props) {
 
       <a
         href="https://www.linkedin.com/in/matheus13f/"
-        className="p-5 bg-yellow rounded-lg hover:bg-yellow/90 transition-colors ease-in text-white text-center z-10"
+        className="p-5 bg-yellow rounded-lg text-slate-800 text-center z-10 border border-slate-800"
       >
         Veja mais no LinkedIn
       </a>

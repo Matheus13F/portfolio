@@ -1,20 +1,20 @@
 type SanityBody = {
-  _createdAtL: string;
+  _createdAt: string;
   _id: string;
   _rev: string;
   _updatedAt: string;
 };
 
 interface Image {
-  _type: "image";
+  _type: 'image';
   asset: {
     _ref: string;
-    _type: "reference";
+    _type: 'reference';
   };
 }
 
 interface PageInfo extends SanityBody {
-  _type: "pageInfo";
+  _type: 'pageInfo';
   address: string;
   backgroundInformation: string;
   email: string;
@@ -29,7 +29,7 @@ interface PageInfo extends SanityBody {
 }
 
 interface Experience extends SanityBody {
-  _type: "experience";
+  _type: 'experience';
   company: string;
   companyImage: Image;
   dateStarted: date;
@@ -40,7 +40,7 @@ interface Experience extends SanityBody {
 }
 
 interface Project extends SanityBody {
-  _type: "project";
+  _type: 'project';
   title: string;
   image: Image;
   linkToBuild: string;
@@ -49,13 +49,13 @@ interface Project extends SanityBody {
 }
 
 interface Social extends SanityBody {
-  _type: "social";
+  _type: 'social';
   title: string;
   url: string;
 }
 
 interface Background extends SanityBody {
-  _type: "background";
+  _type: 'background';
   jobTitle: string;
   description: string;
   hardSkill: string;
@@ -65,7 +65,7 @@ interface Background extends SanityBody {
 }
 
 interface Testimonial extends SanityBody {
-  _type: "testimonial";
+  _type: 'testimonial';
   description: string;
   image: Image;
   name: string;

@@ -1,9 +1,9 @@
-import { groq } from "next-sanity";
-import { client } from "../../../../lib/sanity.client";
-import { NextResponse } from "next/server";
+import { groq } from 'next-sanity';
+import { client } from '../../../../lib/sanity.client';
+import { NextResponse } from 'next/server';
 
 const query = groq`
- *[_type == "experience"] | order(_updatedAt asc) {
+ *[_type == "experience"] | order(_createdAt desc) {
   ...,
   technologies[]->
  }

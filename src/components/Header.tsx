@@ -1,7 +1,8 @@
-import Image from "next/image";
-import { LinkPeek } from "./Form/LinkPeek";
-import Link from "next/link";
-import { NavLink } from "./Form/NavLink";
+import Image from 'next/image';
+import { LinkPeek } from './Form/LinkPeek';
+import Link from 'next/link';
+import { NavLink } from './Form/NavLink';
+import logoImage from '../../public/logo.png';
 
 export function Header() {
   return (
@@ -9,7 +10,7 @@ export function Header() {
       <div className="flex flex-row items-center">
         <a href="/">
           <Image
-            src="/logo.png"
+            src={logoImage}
             alt="profile"
             width={160}
             height={169}
@@ -22,14 +23,14 @@ export function Header() {
         <NavLink url="#experiencia" title="Experiência" />
 
         <NavLink url="#projetos" title="Projetos" />
-        <NavLink url="/newsletter" title="Newsletter" />
+        <NavLink url="https://codepilot.com.br/newsletter" title="Newsletter" />
 
         <LinkPeek href="/produtos" title="E-books" />
 
         <LinkPeek href="https://codepilot.com.br" title="Blog" />
         <Link
           href="/contato"
-          className=" rounded-lg p-2 border-2 border-yellow hover:bg-yellow hover:text-white transition-colors duration-200 text-center"
+          className=" rounded-lg p-2 border-2 border-yellow-500 hover:bg-yellow hover:text-white transition-colors duration-200 text-center"
         >
           Fale comigo
         </Link>

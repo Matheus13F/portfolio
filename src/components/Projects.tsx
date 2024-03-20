@@ -2,9 +2,9 @@ import {
   ArrowTopRightOnSquareIcon,
   ChatBubbleBottomCenterIcon,
   ShareIcon,
-} from "@heroicons/react/24/solid";
-import Image from "next/image";
-import urlFor from "../../lib/urlFor";
+} from '@heroicons/react/24/solid';
+import Image from 'next/image';
+import urlFor from '../../lib/urlFor';
 
 type Props = {
   projects: Project[];
@@ -37,18 +37,18 @@ export function Projects({ projects }: Props) {
               {project.linkToBuild ? (
                 <a
                   href={project?.linkToBuild}
-                  className="flex items-center text-base font-medium gap-2 p-1 bg-green/10  rounded-lg text-green "
+                  className="flex items-center text-base font-medium gap-2 p-1 bg-slate-600/10  rounded-lg text-green-600 "
                 >
-                  <ArrowTopRightOnSquareIcon className="w-4 h-4 text-green" />
+                  <ArrowTopRightOnSquareIcon className="w-4 h-4 text-green-600" />
                   Produção
                 </a>
               ) : (
                 <a
                   href={project.linkToRepo}
-                  className="flex items-center text-base font-medium gap-2 p-1 bg-gray-100/60 text-black rounded-lg"
+                  className="flex items-center text-base font-medium gap-2 p-1 bg-slate-200 text-slate-900 rounded-lg"
                 >
-                  {" "}
-                  <ShareIcon className="w-4 h-4 text-black" />
+                  {' '}
+                  <ShareIcon className="w-4 h-4 text-slate-900" />
                   GitHub
                 </a>
               )}
@@ -58,15 +58,17 @@ export function Projects({ projects }: Props) {
       </div>
 
       <div className="w-full flex flex-col space-y-5 items-center">
-        <h3 className="font-bold text-xl text-center">Interessado em trabalhar comigo?</h3>
+        <h3 className="font-bold text-xl text-center text-slate-800">
+          Interessado em trabalhar comigo?
+        </h3>
         <span className="text-center">
           Estou sempre aberto a novas ideias e oportunidades.
         </span>
         <a
           href="/contato"
-          className="p-5 bg-yellow rounded-lg hover:bg-yellow/90 transition-colors ease-in max-w-10 flex items-center gap-5 text-white"
+          className="p-5 bg-yellow rounded-lg border border-slate-800 max-w-10 flex items-center gap-5 text-slate-800 "
         >
-          <ChatBubbleBottomCenterIcon className="w-7 h-7 text-white" />
+          <ChatBubbleBottomCenterIcon className="w-7 h-7 text-slate-800" />
           Fale comigo
         </a>
       </div>

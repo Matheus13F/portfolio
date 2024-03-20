@@ -5,12 +5,12 @@
 @layer components {
   .heroButton {
     @apply px-6 py-2 border border-gray-900 rounded-full uppercase text-xs tracking-widest 
-    text-gray-300 transition-all hover:border-yellow/40 hover:text-yellow/40;
+    text-gray-300 transition-all hover:border-yellow-500/40 hover:text-yellow-500/40;
   }
 
   .contactInput {
     @apply outline-none bg-gray-900/10 rounded-sm border-b px-6 py-4 border-gray-900
-    text-gray-800 placeholder-gray-700 transition-all focus:border-yellow/40
-    hover:border-yellow/40;
+    text-gray-800 placeholder-gray-700 transition-all focus:border-yellow-500/40
+    hover:border-yellow-500/40;
   }
 }

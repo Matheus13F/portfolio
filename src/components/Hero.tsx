@@ -1,5 +1,5 @@
-import Image from "next/image";
-import urlFor from "../../lib/urlFor";
+import Image from 'next/image';
+import urlFor from '../../lib/urlFor';
 
 type Props = {
   pageInfo: PageInfo;
@@ -25,7 +25,7 @@ export function Hero({ pageInfo }: Props) {
           alt="profile"
           width={500}
           height={500}
-          className="relative rounded-full bg-yellow w-40 mx-auto object-cover mb-0 xs:mb-64 sm:mb-56 md:mb-52"
+          className="relative rounded-full bg-slate-500 w-40 mx-auto object-cover mb-0 xs:mb-64 sm:mb-56 md:mb-52"
         />
         <Image
           src={urlFor(pageInfo?.backgroundImage).url()}
