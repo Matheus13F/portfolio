@@ -20,11 +20,11 @@ export function Projects({ projects }: Props) {
             key={project._id}
             className="bg-white flex flex-col rounded-lg min-h-[19rem] drop-shadow-lg p-8 "
           >
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-center mb-2">
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-base md:text-lg font-bold mb-2">
                 {project.title}
               </h3>
-              <p className="text-[14px]">{project.summary}</p>
+              <p className="text-xs md:text-[14px]">{project.summary}</p>
             </div>
             <div className="flex justify-between items-center gap-2">
               <Image

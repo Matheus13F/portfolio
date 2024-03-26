@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Header } from "../../components/Header";
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { Header } from '../../components/Header';
 
 type Inputs = {
   nome: string;
@@ -31,14 +31,14 @@ export default function Contact() {
             className="flex flex-col space-y-2 px-0 md:px-5 mt-5"
           >
             <input
-              {...register("nome")}
+              {...register('nome')}
               className="contactInput"
               placeholder="Nome"
               required
               type="text"
             />
             <input
-              {...register("email")}
+              {...register('email')}
               className="contactInput"
               placeholder="Email"
               required
@@ -46,7 +46,7 @@ export default function Contact() {
             />
 
             <input
-              {...register("assunto")}
+              {...register('assunto')}
               className="contactInput"
               placeholder="Assunto"
               required
@@ -54,14 +54,14 @@ export default function Contact() {
             />
 
             <textarea
-              {...register("mensagem")}
+              {...register('mensagem')}
               className="contactInput"
               placeholder="Mensagem"
               required
             />
             <button
               type="submit"
-              className="bg-yellow py-5 px-10 rounded-md text-white font-bold text-lg"
+              className="bg-slate-800 py-5 px-10 rounded-md text-white font-bold text-lg"
             >
               Enviar
             </button>

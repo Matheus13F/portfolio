@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ExperienceCard } from './ExperienceCard';
 
 type Props = {
@@ -21,12 +22,12 @@ export function Experience({ experiences }: Props) {
         ))}
       </div>
 
-      <a
+      <Link
         href="https://www.linkedin.com/in/matheus13f/"
-        className="p-5 bg-yellow rounded-lg text-slate-800 text-center z-10 border border-slate-800"
+        className="p-4 rounded-lg text-slate-800 text-center z-10 border border-slate-800 hover:bg-slate-800 hover:text-white transition-colors"
       >
         Veja mais no LinkedIn
-      </a>
+      </Link>
     </div>
   );
 }
